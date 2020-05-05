@@ -3,7 +3,13 @@ const db = require('../../models');
 
 
 router.get('/', function(req, res) {
-    res.render('index', {articles: ["Article1", "Article 2"]})
+    db.Article.find({})
+    .then((thearticles) => {
+        console.log(thearticles);
+
+        res.render('index');
+    })
+   
 })
 
 module.exports = router; 

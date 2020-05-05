@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 let ArticleSchema = new Schema({
-    title: String,
-    description: String,
-    link: String,
-    image: String
-})
+    link: {type: String, default: ""},
+    header: {type: String, default: ""},
+    image: {type: String, default: ""},
+    paragraph: {type: String, default: ""}
+    });
 
 let Article = mongoose.model('Article', ArticleSchema);
 

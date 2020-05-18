@@ -20,10 +20,7 @@ $(document).ready(function () {
                 let button = $('<button type="submit">Submit</button>')
                 button.on("click", function(event) {
                     event.preventDefault();
-                    let articleId = $(`#${article._id}`);
-                    let comment = $(`#${article._id}`).val().trim();
-                    console.log("article id: ", articleId)
-                    console.log("Look a comment: ", comment);
+                    console.log("submit button clicked");
                 })
                 h.text(article["header"])
                 p.text(article["paragraph"])
@@ -38,6 +35,4 @@ $(document).ready(function () {
         .catch(err => {
             console.log("err", err);
         })
-});
-
-module.exports = comment;
+})

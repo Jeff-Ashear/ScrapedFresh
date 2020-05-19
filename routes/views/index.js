@@ -12,4 +12,13 @@ router.get('/', function(req, res) {
    
 })
 
+router.get('/', function(req, res) {
+    db.Comment.find({})
+    .then((thecomments) => {
+        console.log(thecomments);
+
+        res.render('Comment');
+    });
+})
+
 module.exports = router; 

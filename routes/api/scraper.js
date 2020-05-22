@@ -3,6 +3,7 @@ const router = require("express").Router();
 const axios = require('axios');
 
 const cheerio = require("cheerio");
+const db = require("../../models");
 
 router.get("/", function (request, response) {
     response.send("Going to scrape");

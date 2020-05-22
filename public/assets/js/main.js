@@ -54,9 +54,9 @@ $(document).ready(function () {
                         console.error(err)
                     })
 
-                h.text(article["header"])
-                p.text(article["paragraph"])
-                img.attr("src", article["image"])
+                h.text(article["h4"])
+                p.text(article["p"])
+                img.attr("src", article["img"])
                 a.attr("href", article["link"])
                 a.html(h)
                 div.append(img, a, p, input, button, ul)
@@ -70,4 +70,3 @@ $(document).ready(function () {
         })
 });
 
-module.exports = comment;
